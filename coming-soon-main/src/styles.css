@@ -1,0 +1,103 @@
+.flip-clock {
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-digit-block-width: 30px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-font-size: 30px; /* font size of digit */
+  --fcc-digit-color: #000000; /* color of digit */
+  --fcc-label-font-size: 14px; /* font size of label */
+  --fcc-label-color: #fff; /* color of label */
+  --fcc-background: #ffffff; /* background of digit card */
+  --fcc-divider-color: #000000; /* color of divider */
+  --fcc-divider-height: 1px; /* height of divider */
+  --fcc-separator-size: 6px; /* size of colon */
+  --fcc-separator-color: #fff; /* color of colon */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background: hsla(0, 0%, 0%, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.page__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page h3 {
+  font-weight: 300;
+  text-align: center;
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+
+.page video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-clock {
+  font-family: 'Orbitron';
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  width: 180px;
+  height: 64px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* screens bigger than 900px */
+@media (min-width: 900px) {
+  .page h1 {
+    font-size: 4rem;
+  }
+  .page h3 {
+    max-width: 600px;
+  }
+  .flip-clock {
+    --fcc-digit-block-width: 80px;
+    --fcc-digit-block-height: 120px;
+    --fcc-digit-font-size: 60px;
+    --fcc-label-font-size: 20px;
+  }
+}
